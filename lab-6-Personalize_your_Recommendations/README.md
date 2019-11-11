@@ -156,7 +156,6 @@ We need to download two files before starting work, which are all stored within 
 #### Notes on the Application
 
 1. The RDS database is postgres, and we have included the **pgcli** tool with this deployment, as you may wish to look at the database schema structure, examine the data that was in the RDS snapshot, or potentially update this all after you have customised the Django application for your own needs.  There is a startup script for this in the **/home/ec2-user/personalize-video-recs/videorecs/** folder, which is the root of the whole Django framework application.
-2. **CURRENT BUG** - when the CloudFormation template is complete there is a running web-application, but for some (currently unknown) reason it fails its health check.  However, SSH'ing into the instance will show the web-server job running, configuration is correct, etc.  If you get a *Bad Gateway* error when you navigate to the application, please terminate the EC2 instance - auto-scaling will bring another back to life, which always seems to be fine.
 
 ## Running the Video Recommendation App
 
